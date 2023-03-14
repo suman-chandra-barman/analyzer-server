@@ -31,6 +31,11 @@ const dbConnect = () => {
 };
 dbConnect();
 
+// database and collection create
+const incomeCollection = client.db("analyser").collection("incomes");
+const expenseCollection = client.db("analyser").collection("expenses");
+
+// root api
 app.use("/", (req, res) => {
   try {
     res.send("Expense Analyzer server is running");
