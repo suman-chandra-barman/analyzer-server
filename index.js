@@ -82,7 +82,6 @@ app.delete("/incomes/:id", async (req, res) => {
     const id = req.params.id;
     const query = { _id: new ObjectId(id) };
     const result = await incomeCollection.deleteOne(query);
-    console.log(result);
     res.send({
       status: true,
       data: result,
@@ -144,7 +143,6 @@ app.delete("/expenses/:id", async (req, res) => {
     const id = req.params.id;
     const query = { _id: new ObjectId(id) };
     const result = await expenseCollection.deleteOne(query);
-    console.log(result);
     res.send({
       status: true,
       data: result,
